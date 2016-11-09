@@ -1,0 +1,13 @@
+name: install-packer
+version: 0.0.1
+description: Install HashiCorp/Packer
+keywords:
+  - packer
+properties:
+  version:
+    type: string
+    required: true
+  use-cache:
+    type: string
+    default: true
+    required: false

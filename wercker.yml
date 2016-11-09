@@ -1,0 +1,10 @@
+box: buildpack-deps:jessie
+build:
+  steps:
+    - script:
+      name: test packer
+      code: |
+        export WERCKER_INSTALL_PACKER_VERSION="0.11.0"
+        export WERCKER_INSTALL_PACKER_USE_CACHE="true"
+        source ./run.sh
+        packer version
