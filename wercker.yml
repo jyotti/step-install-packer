@@ -1,4 +1,4 @@
-box: buildpack-deps:jessie
+box: wercker/default
 build:
   steps:
     - script:
