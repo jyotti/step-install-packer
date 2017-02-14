@@ -1,0 +1,18 @@
+#box: ubuntu:14.04.5
+box: buildpack-deps:trusty-curl
+
+build:
+  steps:
+    - install-packages:
+        packages: unzip
+        clear-cache: false
+    - script:
+        name: test
+        code: |
+          export WERCKER_INSTALL_PACKER_VERSION=0.12.2
+          export WERCKER_INSTALL_PACKER_USE_CACHE="true"
+          bash ./run.sh
+    - script:
+        name: check version
+        code: |
+          packer version
