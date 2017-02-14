@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./tests/init.sh
+#source ./tests/init.sh
 
 PACKER_SYMLINK_DIR="/usr/local/bin"
 PACKER_INSTALL_DIR="/usr/local/src"
